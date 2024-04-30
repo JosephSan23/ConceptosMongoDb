@@ -1,0 +1,15 @@
+//Si no esta creadfa la base de datos la crear con use
+use("platzi_store")
+
+db.products.insertOne({
+    _id: 1,
+    name: "Product 3",
+    price: 1000
+})
+
+db.products.insertOne({
+    _id: 2,
+    name: "Product 4",
+    price: 100
+})
+
