@@ -1,6 +1,6 @@
 use("platzi_store")
 
-// db.products.drop()
+db.products.drop()
 
 db.products.insertMany([
     {
@@ -18,10 +18,11 @@ db.products.insertMany([
         name: "Product 3",
         price: 300
     },
+    {
+        name: "Product 4",
+    },
 
 ], {
-    // Deja por fuera los elementos que tienen duplicidad 
-    ordered: false
 })
 
 db.products.find()
