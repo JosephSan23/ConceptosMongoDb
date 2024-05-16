@@ -1,0 +1,19 @@
+use("platzi_store")
+
+// using $eq
+// Trae los elementos que cumplen con la condicion
+/*Implicita*/
+// db.inventory.find({ qty: 20 })
+/*Explicita*/
+// db.inventory.find({ qty: { $eq: 20 } })
+
+// llendo a un subobjeto de un documento
+// db.inventory.find({ "item.code": "123" })
+db.inventory.find({ "item.code": { $eq: "123" } })
+
+// Using $ne
+// Trae los elementos que son distintos a la condicion realizada
+db.inventory.find({ qty: { $ne: 20 } })
+
+
+
