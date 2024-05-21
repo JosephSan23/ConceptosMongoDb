@@ -1,0 +1,31 @@
+use("platzi_store")
+
+// $in, values & arrays, trae elementos que contengan
+// db.inventory.find({ qty: { $in: [20, 25] } })
+
+// db.inventory.find({ tags: { $in: ["electronics", "book"] } })
+
+// $nin, values & arrays, trae elementoes que no contengan
+// db.inventory.find({ qty: { $nin: [20, 25] } })
+
+// db.inventory.find({ tags: { $nin: ["electronics", "book"] } })
+
+
+// db.inventory.find({ tags: "book" })
+// trae exactamente los que contengan los datos a consultar, el orden tambien importa
+// db.inventory.find({ tags: ["school", "book"] })
+// db.inventory.find({ tags: ["book", "school"] })
+
+
+// operadores que solo funcionan para arrays
+// $all debe contener ambos no importa la posicion
+// db.inventory.find({ tags: { $all: ["book", "school"] } })
+
+// $size el tamaño del array debe ser con la condicion en este caso 2 elementos
+// db.inventory.find({ tags: { $size: 2 } })
+
+// $elementMatch, trae todo los elementos en este caso de producto que contengan xyz, el resto de productos del mismo campo
+db.survey.find({
+    results: { $elemMatch: { product: "xyz", score: { $gte: 7 } } }
+})
+
