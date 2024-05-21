@@ -9,4 +9,4 @@ db.products.updateOne(
             price: 100,
         }
     }
-);
+);  

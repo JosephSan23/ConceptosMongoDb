@@ -20,7 +20,7 @@ db.products.insertMany([
     },
 
 ], {
-    // Deja por fuera los elementos que tienen duplicidad 
+    // Deja por fuera los elementos que tienen duplicidad
     ordered: false
 })
 
