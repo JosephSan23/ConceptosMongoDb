@@ -1,0 +1,17 @@
+use("platzi_store")
+
+// Expresiones regulares
+// db.inventory.find({ "item.description": "Single line description." })
+// db.inventory.find({ "item.description": { $regex: /line/ } })
+
+// Cuando se quiere buscar palabras que sean mayusculas y minusculas se pone el i a lado de la expresion
+// db.inventory.find({ "item.description": { $regex: /LINE/i } })
+
+// Consultar los datos que finalicen en
+// db.inventory.find({ "item.description": { $regex: /line$/i } })
+// Consultar los datos que inicien en
+// db.inventory.find({ "item.description": { $regex: /^single/i } })
+
+// Que comiencen con cierta letra aun asi con saltos de linea \n
+db.inventory.find({ "item.description": { $regex: /^s/im } })
+
